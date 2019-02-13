@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Enterprise.Framework.DI" Version="1.0.0.2" />
+    <PackageReference Include="Enterprise.Framework.Log" Version="1.0.0.5" />
+    <PackageReference Include="Enterprise.Framework.Log.MongoDB" Version="1.0.0.15" />
+    <PackageReference Include="Enterprise.Framework.MongoDB" Version="1.0.0.2" />
+    <PackageReference Include="Enterprise.Framework.WebApi.Security.Legacy" Version="1.0.0.2" />
+    <PackageReference Include="Microsoft.Diagnostics.EventFlow.Inputs.MicrosoftLogging" Version="1.4.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Orquestrador.Application.Impl\Orquestrador.Application.Impl.csproj" />
+    <ProjectReference Include="..\Orquestrador.Application\Orquestrador.Application.csproj" />
+    <ProjectReference Include="..\Orquestrador.Domain\Orquestrador.Domain.csproj" />
+    <ProjectReference Include="..\Orquestrador.Infrastructure.Http\Orquestrador.Infrastructure.Http.csproj" />
+    <ProjectReference Include="..\Orquestrador.Infrastructure.MongoDb\Orquestrador.Infrastructure.MongoDb.csproj" />
+  </ItemGroup>
+
+</Project>

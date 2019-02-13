@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Enterprise.Framework.DI" Version="1.0.0.2" />
+    <PackageReference Include="Enterprise.Framework.Log" Version="1.0.0.5" />
+    <PackageReference Include="Enterprise.Framework.Log.MongoDB" Version="1.0.0.15" />
+    <PackageReference Include="Enterprise.Framework.MongoDB" Version="1.0.0.2" />
+    <PackageReference Include="Enterprise.Framework.WebApi.Security.Legacy" Version="1.0.0.2" />
+    <PackageReference Include="Microsoft.Diagnostics.EventFlow.Inputs.MicrosoftLogging" Version="1.4.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Enterprise.Framework.Logging\Enterprise.Framework.Logging.csproj" />
+    <ProjectReference Include="..\Enterprise.Framework.SqlClient\Enterprise.Framework.SqlClient.csproj" />
+    <ProjectReference Include="..\Loja.Application.Impl\Loja.Application.Impl.csproj" />
+    <ProjectReference Include="..\Loja.Application\Loja.Application.csproj" />
+    <ProjectReference Include="..\Loja.Domain\Loja.Domain.csproj" />
+    <ProjectReference Include="..\Loja.Infrastructure.Http\Loja.Infrastructure.Http.csproj" />
+    <ProjectReference Include="..\Loja.Infrastructure.MongoDb\Loja.Infrastructure.MongoDb.csproj" />
+    <ProjectReference Include="..\Loja.Infrastructure.SqlClient\Loja.Infrastructure.SqlClient.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>IntegracaoParceiroServicos.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{0cbf6a25-fcea-4893-879b-98c7270f2279}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>IntegracaoParceiroServicos.Database</RootNamespace>
+    <AssemblyName>IntegracaoParceiroServicos.Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Tabelas" />
+    <Folder Include="Procedimentos" />
+    <Folder Include="Scripts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tabelas\IntegracaoParceiroCompraLoja.sql" />
+    <Build Include="Tabelas\IntegracaoParceiroBhnAcaoEgift.sql" />
+    <Build Include="Tabelas\IntegracaoParceiroProduto.sql" />
+    <Build Include="Procedimentos\IntegracaoParceiroCompraLojaListarPorMaisRecente.sql" />
+    <Build Include="Procedimentos\IntegracaoParceiroProdutoObterPorSku.sql" />
+    <Build Include="Procedimentos\IntegracaoParceiroCompraLojaInserir.sql" />
+    <Build Include="Procedimentos\IntegracaoParceiroCompraLojaAlterar.sql" />
+    <Build Include="Procedimentos\IntegracaoParceiroCompraLojaObterPorCompraEntrega.sql" />
+    <Build Include="Scripts\IntegracaoParceiroProduto_SeedPreProd.sql" />
+    <Build Include="Procedimentos\IntegracaoParceiroCompraLojaListarComAceite.sql" />
+    <Build Include="Tabelas\IntegracaoParceiroEmpresa.sql" />
+    <Build Include="Procedimentos\IntegracaoParceiroBhnAcaoEGiftListar.sql" />
+    <Build Include="Procedimentos\IntegracaoParceiroCompraLojaListar.sql" />
+    <Build Include="Procedimentos\IntegracaoParceiroCompraLojaListarComAtivacao.sql" />
+    <Build Include="Procedimentos\IntegracaoParceiroCompraLojaAlterarStatusParceiro.sql" />
+    <Build Include="Procedimentos\IntegracaoParceiroCompraLojaAlterarStatusAtivacao.sql" />
+    <None Include="Scripts\Layout_CodigoAtivacaoBHN_PF.sql" />
+    <None Include="Scripts\Layout_CodigoAtivacaoBHN_EX.sql" />
+    <None Include="Scripts\EmailTipo_CodigoAtivacaoBHN_PF.sql" />
+    <None Include="Scripts\EmailTipo_CodigoAtivacaoBHN_EX.sql" />
+    <None Include="Scripts\Layout_CodigoAtivacaoBHN_BR.sql" />
+    <None Include="Scripts\Layout_CodigoAtivacaoBHN_HP.sql" />
+    <None Include="Scripts\EmailTipo_CodigoAtivacaoBHN_BR.sql" />
+    <None Include="Scripts\EmailTipo_CodigoAtivacaoBHN_HP.sql" />
+    <Build Include="Procedimentos\IntegracaoParceiroCompraLojaListarParametrizado.sql" />
+    <Build Include="Procedimentos\IntegracaoParceiroCompraLojaAlterarDataEmailAtivacao.sql" />
+    <Build Include="Procedimentos\IntegracaoERPCompraLojaListar.sql" />
+    <Build Include="Procedimentos\IntegracaoERPCompraLojaAlterarStatusERP.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\IntegracaoParceiroEmpresa_SeedPreProd.sql" />
+    <None Include="Procedimentos\IntegracaoParceiroCompraLojaAlterarStatusAceite.sql" />
+    <None Include="Scripts\Layout_CodigoAtivacaoBHN_CB.sql" />
+    <None Include="Scripts\EmailTipo_CodigoAtivacaoBHN_CB.sql" />
+    <None Include="Scripts\DadosConfiguracao_EmailTipoCodigoAtivacaoBHN_CB.sql" />
+    <None Include="Scripts\Inserts_IntegracaoParceiroBhnAcaoEgift.sql" />
+  </ItemGroup>
+</Project>

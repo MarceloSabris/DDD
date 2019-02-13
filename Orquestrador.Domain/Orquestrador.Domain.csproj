@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Enterprise.Framework" Version="1.0.2.14" />
+    <PackageReference Include="Enterprise.Framework.Domain" Version="1.0.0.4" />
+    <PackageReference Include="Enterprise.Framework.Domain.Events" Version="1.0.0" />
+    <PackageReference Include="FluentValidation" Version="7.6.103" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Orquestrador.Common\Orquestrador.Common.csproj" />
+    <ProjectReference Include="..\Orquestrador.Core\Orquestrador.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Erp\Events\" />
+    <Folder Include="Parceiro\Events\" />
+    <Folder Include="Parceiro\Models\" />
+    <Folder Include="Parceiro\Services\" />
+    <Folder Include="Utilitario\Models\" />
+    <Folder Include="Utilitario\Events\" />
+    <Folder Include="Utilitario\Services\" />
+  </ItemGroup>
+
+</Project>

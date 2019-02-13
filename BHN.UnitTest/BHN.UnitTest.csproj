@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.2" />
+    <PackageReference Include="Moq" Version="4.8.3" />
+    <PackageReference Include="xunit" Version="2.3.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
+    <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Enterprise.Framework" Version="1.0.2.14" />
+    <PackageReference Include="Enterprise.Framework.Services" Version="1.0.0.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BHN.Application\BHN.Application.csproj" />
+    <ProjectReference Include="..\BHN.Application.Impl\BHN.Application.Impl.csproj" />
+    <ProjectReference Include="..\BHN.Infrastructure.Http\BHN.Infrastructure.Http.csproj" />
+    <ProjectReference Include="..\BHN.Infrastructure.MongoDb\BHN.Infrastructure.MongoDb.csproj" />
+    <ProjectReference Include="..\BHN.Infrastructure.SqlClient\BHN.Infrastructure.SqlClient.csproj" />
+  </ItemGroup>
+
+</Project>

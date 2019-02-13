@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Enterprise.Framework" Version="1.0.2.14" />
+    <PackageReference Include="Enterprise.Framework.MongoDB" Version="1.0.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BHN.Domain\BHN.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

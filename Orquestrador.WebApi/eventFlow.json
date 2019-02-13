@@ -1,0 +1,28 @@
+﻿{
+  "inputs": [
+    {
+      "type": "Microsoft.Extensions.Logging",
+      "traceLelve":  "All"
+    }
+  ],
+  "filters": [
+  ],
+  "outputs": [
+    {
+      "type": "MongoDBOutput",
+      "config": {
+        "connectionString": "mongodb://localhost:27017/atedimento",
+        "collectionName": "atedimento-log",
+        "expireAfterDays": "365",
+        "newCollectionMaxSize": "0"
+      }
+    }
+  ],
+  "extensions": [
+    {
+      "category": "outputFactory",
+      "type": "MongoDBOutput",
+      "qualifiedTypeName": "Enterprise.Framework.Log.MongoDB.EventFlow.MongoDBOutputFactory, Enterprise.Framework.Log.MongoDB"
+    }
+  ]
+}

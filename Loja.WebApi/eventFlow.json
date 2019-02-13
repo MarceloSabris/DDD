@@ -1,0 +1,28 @@
+﻿{
+  "inputs": [
+    {
+      "type": "Microsoft.Extensions.Logging",
+      "traceLelve":  "All"
+    }
+  ],
+  "filters": [
+  ],
+  "outputs": [
+    {
+      "type": "MongoDBOutput",
+      "config": {
+        "connectionString": "mongodb://10.128.132.240:27017/mongo_des_casasbahia",
+        "collectionName": "IntegracaoParceiroLojaLog",
+        "expireAfterDays": "365",
+        "newCollectionMaxSize": "0"
+      }
+    }
+  ],
+  "extensions": [
+    {
+      "category": "outputFactory",
+      "type": "MongoDBOutput",
+      "qualifiedTypeName": "Enterprise.Framework.Log.MongoDB.EventFlow.MongoDBOutputFactory, Enterprise.Framework.Log.MongoDB"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AceiteTermo\**" />
+    <EmbeddedResource Remove="AceiteTermo\**" />
+    <None Remove="AceiteTermo\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Enterprise.Framework" Version="1.0.2.14" />
+    <PackageReference Include="Enterprise.Framework.Log" Version="1.0.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Enterprise.Framework.Logging\Enterprise.Framework.Logging.csproj" />
+    <ProjectReference Include="..\Loja.Application\Loja.Application.csproj" />
+    <ProjectReference Include="..\Loja.Common\Loja.Common.csproj" />
+    <ProjectReference Include="..\Loja.Core\Loja.Core.csproj" />
+    <ProjectReference Include="..\Loja.Domain\Loja.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="obj\" />
+  </ItemGroup>
+
+</Project>

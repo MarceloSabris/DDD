@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Enterprise.Framework" Version="1.0.2.14" />
+    <PackageReference Include="Enterprise.Framework.Domain" Version="1.0.0.4" />
+    <PackageReference Include="Enterprise.Framework.Domain.Events" Version="1.0.0" />
+    <PackageReference Include="FluentValidation" Version="7.6.103" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BHN.Common\BHN.Common.csproj" />
+    <ProjectReference Include="..\BHN.Core\BHN.Core.csproj" />
+  </ItemGroup>
+
+</Project>
